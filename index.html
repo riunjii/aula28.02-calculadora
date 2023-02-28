@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
-</head>
-<body>
-    <h1>Calculadora Básica</h1>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculadora</title>
+    </head>
+    <body>
+        <!-- Cabeçalho da calculadora -->
+        <h1>Calculadora Básica</h1>
+        <form>
+            <!-- Inputs de texto e o ultimo não recebe valores -->
+            <input type="text" id="num1" />
+            +
+            <input type="text" id="num2" />
+            <button type="button" onclick="somar()">Somar</button>
+
+            <input type="text" id="resp" readonly />
+        </form>
+        <script>
+            function somar() {
+                var num1, num2, resp;
+
+                num1 = parseFloat(document.getElementById("num1").value);
+                num2 = parseFloat(document.getElementById("num2").value);
+                
+                resp = num1 + num2;
+
+                document.getElementById("resp").value = resp;
+            }
+        </script>
+    </body>
 </html>
